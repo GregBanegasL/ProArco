@@ -42,4 +42,12 @@ public class Encurtido {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public void setPicante(boolean picante) {
+        this.picante = picante;
+    }
 }

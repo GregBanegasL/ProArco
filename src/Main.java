@@ -34,8 +34,24 @@ public class Main {
         for(int i = 0;i<listaCliente.length;i++){
             System.out.println(listaEncurtido[i].getCod()+" "+listaEncurtido[i].getIngredientes());
         }
+
+        Empleado empleado = new Empleado("Julio","5656669633221","99886655",false,
+                "julio@julio.com","Vendedor");
+
+        System.out.printf("\n ----Empleado\n"+empleado.getNombre()+"\n"+
+                empleado.getIdentidad()+"\n"+
+                empleado.getSexo()+"\n"+
+                empleado.getCargo()+"\n"+
+                empleado.getCorreo());
+
+        empleado.setCargo("Repartidor");
+        empleado.setNumeroCelular("77885588");
+        empleado.setCorreo("julio@gmail.com");
+
+        System.out.printf("\n ----Empleado Seteado\n"+empleado.getNombre()+"\n"+
+                empleado.getIdentidad()+"\n"+
+                empleado.getSexo()+"\n"+
+                empleado.getCargo()+"\n"+
+                empleado.getCorreo());
     }
-
-
-
 }
