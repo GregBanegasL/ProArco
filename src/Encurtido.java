@@ -1,16 +1,14 @@
-public class Encurtido {
-    int cod;
+public class Encurtido extends Artesania{
     String ingredientes;
     int tipoVinagre;
     boolean picante;
-    int precio;
 
-    public Encurtido(int cod, String ingredientes, int tipoVinagre, boolean picante, int precio) {
-        this.cod = cod;
+
+    public Encurtido(int cod, int precio, String ingredientes, int tipoVinagre, boolean picante) {
+        super(cod, "Encurtido", precio, 3);
         this.ingredientes = ingredientes;
         this.tipoVinagre = tipoVinagre;
         this.picante = picante;
-        this.precio = precio;
     }
 
     public int getCod() {

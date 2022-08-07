@@ -18,11 +18,11 @@ public class Main {
             System.out.println(listaCliente[i].getNombre());
         }
 
-        Encurtido encurtido = new Encurtido(2022,"Cebolla, Chile, Zanahoria",1,false,120);
-        Encurtido encurtido2 = new Encurtido(2023,"Cebolla, Chile, Zanahoria",2,true,125);
-        Encurtido encurtido3 = new Encurtido(2024,"Cebolla, Chile, Zanahoria",1,true,120);
-        Encurtido encurtido4 = new Encurtido(2025,"Cebolla, Chile, Zanahoria, Rabano",1,true,130);
-        Encurtido encurtido5 = new Encurtido(2026,"repollo ",1,false,80);
+        Encurtido encurtido = new Encurtido(2022,150,"Cebolla, Chile, Zanahoria",1,true);
+        Encurtido encurtido2 = new Encurtido(2023,120,"Repollo",1,false);
+        Encurtido encurtido3 = new Encurtido(2024,140,"Cebolla",2,false);
+        Encurtido encurtido4 = new Encurtido(2025,130,"Cebolla, Chile, Zanahoria",3,false);
+        Encurtido encurtido5 = new Encurtido(2026,160,"Cebolla, Chile, Zanahoria, piña",3,true);
 
         Encurtido [] listaEncurtido = new Encurtido[5];
         listaEncurtido[0] = encurtido;
@@ -35,8 +35,8 @@ public class Main {
             System.out.println(listaEncurtido[i].getCod()+" "+listaEncurtido[i].getIngredientes());
         }
 
-        Empleado empleado = new Empleado("Julio","5656669633221","99886655",false,
-                "julio@julio.com","Vendedor");
+        Empleado empleado = new Empleado("Julio","031488552222","88558855",false,
+                "julio@julio.com","Vendedor",8000);
 
         System.out.printf("\n ----Empleado\n"+empleado.getNombre()+"\n"+
                 empleado.getIdentidad()+"\n"+

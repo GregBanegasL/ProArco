@@ -1,17 +1,9 @@
-public class Mermelada {
-    int cod;
+public class Mermelada extends Artesania{
     String sabor;
-    int precio;
 
-    public Mermelada(int cod, String sabor, int precio) {
-        this.cod = cod;
-        this.sabor = sabor;
-        this.precio = precio;
-    }
-
-    public Mermelada(int cod, int precio) {
-        this.cod = cod;
-        this.precio = precio;
+    public Mermelada(int cod, int precio, String Sabor) {
+        super(cod, "Mermelada", precio, 2);
+        this.sabor = Sabor;
     }
 
     public int getCod() {
