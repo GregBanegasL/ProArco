@@ -1,8 +1,8 @@
 public class Cliente {
-    String Nombre;
-    String Identidad;
-    String NumeroCelular;
-    Boolean Sexo;
+    private String Nombre;
+    private String Identidad;
+    private String NumeroCelular;
+    private Boolean Sexo;
 
     //constructor
 
@@ -24,21 +24,18 @@ public class Cliente {
     //metodos
 
     public String getNombre() {
-        return Nombre;
+        return this.Nombre;
     }
 
     public String getIdentidad() {
-
-        return Identidad;
+        return this.Identidad;
     }
 
     public String getNumeroCelular() {
-
-        return NumeroCelular;
+        return this.NumeroCelular;
     }
 
     public void setNumeroCelular(String numeroCelular) {
-
         NumeroCelular = numeroCelular;
     }
 
@@ -49,6 +46,17 @@ public class Cliente {
 
     }
 
-
+    public String getAtributos(){
+        return "\nNombre: "+getNombre()+
+                "\nIdentidad: "+getIdentidad()+
+                "\nCelular: "+getNumeroCelular()+
+                "\nSexo: "+getSexo();
+    }
+    public String getAtributos2(){
+        return "\nNombre: "+getNombre()+
+                //"\nIdentidad: "+getIdentidad()+
+                "\nCelular: "+getNumeroCelular();
+                //"\nSexo: "+getSexo();
+    }
 
 }

@@ -1,44 +1,34 @@
 public class Encurtido extends Artesania{
-    String ingredientes;
-    int tipoVinagre;
-    boolean picante;
+    private String ingredientes;
+    private int tipoVinagre;
+    private boolean picante;
 
 
     public Encurtido(int cod, int precio, String ingredientes, int tipoVinagre, boolean picante) {
-        super(cod, "Encurtido", precio, 3);
+        super(cod, "Encurtido", precio, 2);
         this.ingredientes = ingredientes;
         this.tipoVinagre = tipoVinagre;
         this.picante = picante;
     }
 
-    public int getCod() {
-        return cod;
-    }
-
     public String getIngredientes() {
-        return ingredientes;
+        return this.ingredientes;
     }
 
     public String getTipoVinagre() {
         //1 manzana, 2 blanco
-        String aux="";
-        if(tipoVinagre==1){
-            aux = "Manzana";
-        }
-        else aux = "Blanco";
-        return aux;
+        if(this.tipoVinagre==1){
+            return  "Manzana";
+        } else if (this.tipoVinagre==2) {
+            return "Blanco";
+        } else if (this.tipoVinagre==3) {
+            return "Piña";
+        }else
+            return "No definido";
     }
 
     public String getPicante() {
-        return picante?"Picante":"No picante";
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
+        return picante?"Si":"No";
     }
 
     public void setIngredientes(String ingredientes) {
@@ -47,5 +37,13 @@ public class Encurtido extends Artesania{
 
     public void setPicante(boolean picante) {
         this.picante = picante;
+    }
+
+    public String getAtributos(){
+        return super.getAtributos2()+
+                "\nIngredientes: "+getIngredientes()+
+                "\nVinagre: "+getTipoVinagre()+
+                "\nPicante: "+getPicante()+
+                "\nPrecio: "+super.getPrecio()+"L";
     }
 }

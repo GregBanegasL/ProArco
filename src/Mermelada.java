@@ -1,24 +1,19 @@
 public class Mermelada extends Artesania{
-    String sabor;
+    private String sabor;
 
     public Mermelada(int cod, int precio, String Sabor) {
-        super(cod, "Mermelada", precio, 2);
+        super(cod, "Mermelada", precio, 3);
         this.sabor = Sabor;
     }
 
-    public int getCod() {
-        return cod;
-    }
-
     public String getSabor() {
-        return sabor;
+        return this.sabor;
     }
 
-    public int getPrecio() {
-        return precio;
+    public String getAtributos(){
+        return super.getAtributos2()+
+                "\nSabor: "+getSabor()+
+                "\nPrecio: "+super.getPrecio()+"L";
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
 }
